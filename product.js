@@ -41,6 +41,14 @@ module.exports = (sequelize, DataTypes) => {
         available: {
             type: DataTypes.BOOLEAN,
             defaultValue: true,
+        },
+        category_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'Category',
+                key: 'category_id',
+            }
         }
     }, {
         sequelize,
