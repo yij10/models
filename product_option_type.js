@@ -9,6 +9,11 @@ module.exports = (sequelize, DataTypes) => {
   }
 
   Product_Option_Type.init({
+    id: {
+      type:DataTypes.INTEGER,
+      primaryKey: true,
+      allowNull: false,
+    },
     product_id: {
         type: DataTypes.INTEGER,
         allowNull: false,

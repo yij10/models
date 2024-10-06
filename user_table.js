@@ -9,6 +9,11 @@ module.exports = (sequelize, DataTypes) => {
   }
 
   User_Table.init({
+    id: {
+      type:DataTypes.INTEGER,
+      primaryKey: true,
+      allowNull: false,
+    },
     table_id: {
         type: DataTypes.INTEGER,
         allowNull: false
