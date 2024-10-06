@@ -5,7 +5,7 @@ const {Most, Sequelize, DataTypes, Model} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     class Order extends Model {
         static associate(models) {
-            Order.belongsTo(model.Product, {
+            Order.belongsTo(models.Product, {
                 foreignKey: 'product_id',
             });
 
@@ -59,6 +59,7 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         sequelize,
         modelName: 'Order',
+        tableName: 'Order',
     });
 
     return Order;

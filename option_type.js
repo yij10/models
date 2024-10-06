@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       Option_Type.belongsToMany(models.Product, {
         through: models.Product_Option_Type,
         foreignKey: 'option_type_id',
-        otherKey: product_id,
+        otherKey: 'product_id',
       });
     }
   }
@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Option_Type',
+    tableName: 'Option_Type',
   });
 
   return Option_Type;
