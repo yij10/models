@@ -25,6 +25,19 @@ module.exports = (sequelize, DataTypes) => {
         name: {
             type: DataTypes.STRING(64),
             allowNull: false,
+        },
+        option_type_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'Option_Type',
+                key: 'option_type_id',
+            }
+        },
+        price: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0,
         }
     }, {
         sequelize,
