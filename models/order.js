@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'handler_id',
         as: 'handler'
       });
-      Order.hasMany(models.Order_Item, {
+      Order.hasMany(models.Order_Product, {
         foreignKey: 'order_id'
       });
       Order.belongsTo(models.Table, {
