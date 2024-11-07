@@ -25,7 +25,16 @@ module.exports = (sequelize, DataTypes) => {
   }
   Coupon.init({
     name: DataTypes.STRING,
-    expire: DataTypes.DATE
+    expire: DataTypes.DATE,
+    type: DataTypes.STRING,
+    percent_off: {
+      allowNull: true,
+      type: DataTypes.FLOAT
+    },
+    discount: {
+      allowNull: true,
+      type: DataTypes.INTEGER
+    },
   }, {
     sequelize,
     modelName: 'Coupon',

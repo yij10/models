@@ -16,7 +16,10 @@ module.exports = (sequelize, DataTypes) => {
   User_Coupon.init({
     user_id: DataTypes.INTEGER,
     coupon_id: DataTypes.INTEGER,
-    order_id: DataTypes.INTEGER
+    order_id: {
+      allowNull: true,
+      type: DataTypes.INTEGER
+    }
   }, {
     sequelize,
     modelName: 'User_Coupon',

@@ -17,6 +17,18 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: true, // null if the coupon never expires
       },
+      type: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      percent_off: { // 0.1 = 10% off
+        type: Sequelize.FLOAT,
+        allowNull: true,
+      },
+      discount: { // directly subtracted from the total price
+        type: Sequelize.INTEGER,
+        allowNull: true,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
